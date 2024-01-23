@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My teacher is dumb, but here you go, my first html page in django</h1>
+
+    {% for var in collection %}
+        statement block
+    {% endfor %}
+    <!-- FILTER -->
+    <!-- <h1>first -> {{message|first}}</h1>
+    <h1>last -> {{message|last}}</h1>
+    <h1>title -> {{message|title}}</h1>
+    <h1>random -> {{message|random}}</h1>
+    <br>
+    <h1>add -> {{'hii   '|add:message|add:'   PYthon'}}</h1>
+    <br>
+    <h1>Slice -> {{message|slice:'0:9:1'}}</h1>
+    <h1>Word count -> {{message|wordcount}}</h1>
+    <h1>length -> {{message|length}}</h1>
+    <h1>Upper -> {{message|upper}}</h1> -->
+    <!-- FILTER -->
+    <!-- comments -->
+    {% comment %}
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum, tempore provident accusamus aliquam
+        laborum quis obcaecati, voluptate error id ducimus esse vitae ullam temporibus nulla neque sint saepe in, totam
+        tenetur eaque! Consequuntur fugit enim cum pariatur? Iure magni doloremque repellat labore animi molestias ullam
+        cum minima veniam ipsum.</p>
+    {% endcomment %}
+    <!-- comments -->
+    <!-- IF CONDITION -->
+    <!-- {{num}}
+    {% if num|divisibleby:2 %}
+        <h1>This is an even number</h1>
+    {% elif num == 9 %}
+        <h1>This is a block from elif, and the number is 9</h1>
+    {% else %}
+        <h1>This is an odd number</h1>
+    {% endif %} -->
+    <!-- IF CONDITION -->
+    <!-- <h1>{{message2}}</h1>
+    <h1>Messages from url slug var1 and var2 -> {{m1}} {{m2}}</h1>
+    <h1>Dynamic data from url -> {{slug}}</h1> -->
+
+
+</body>
+</html>

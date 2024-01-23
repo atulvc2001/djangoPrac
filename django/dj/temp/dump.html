@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block header %}
+    <h1>Page 1</h1>
+    {% endblock %}
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis enim commodi libero rerum? Aspernatur
+        asperiores velit dolore temporibus saepe corporis impedit, maxime nesciunt minima, eveniet praesentium fuga rem
+        aperiam accusantium? Repellendus id saepe numquam? Qui similique aut sint ipsum, exercitationem excepturi
+        placeat tempora, fuga modi voluptatum eveniet nostrum quam quis repellat aliquid accusamus laboriosam labore cum
+        iste id quasi culpa dicta totam? Odio aut repellat eum, alias ipsam tenetur, iste, blanditiis sequi maxime
+        magnam voluptas aliquam maiores nostrum modi tempora voluptatum! Eum tenetur, ea pariatur optio quidem quam,
+        incidunt atque officia vitae, iure voluptatibus! Eius molestias vitae dolorem numquam fugiat alias ab ea!
+        Minima, distinctio itaque iure debitis dolorum perspiciatis eos sapiente nesciunt recusandae ipsa quos soluta
+        dolorem! Modi, dolorum. Vitae aliquam a temporibus magni vero optio. Non, ipsam dolores, ex cum excepturi
+        dolorum voluptates quae, molestiae quos deleniti neque explicabo voluptatem! Distinctio est perspiciatis quae
+        maiores at sunt alias recusandae. Ullam neque debitis maxime, explicabo quidem animi ex nostrum odio repellendus
+        velit nisi dolores dignissimos. Ratione reprehenderit eaque nisi, ad accusantium error aperiam facilis
+        recusandae libero facere sit tenetur harum cum quidem, reiciendis possimus repellat voluptate blanditiis.
+        Reprehenderit totam beatae eaque maiores aut ipsa nostrum voluptatem vitae molestias cupiditate hic iure, dolore
+        sequi esse labore? Quasi dignissimos eveniet soluta nobis. Nostrum, dicta earum vero veritatis delectus natus
+        magnam molestias dolores unde facere sapiente adipisci incidunt inventore repudiandae expedita labore ex quia
+        excepturi obcaecati. Vero quasi sint fugiat doloremque, obcaecati sit animi veritatis voluptas non asperiores?
+        Sint sequi soluta praesentium autem placeat nulla optio incidunt unde quam minima? Consequuntur eaque ea qui
+        perspiciatis quod quos, voluptatem ipsum vel incidunt id atque delectus ad unde minima debitis alias eius maxime
+        quae quia? Itaque sapiente soluta nobis sed temporibus, quod aliquam nam ad minus, quisquam aliquid dignissimos
+        corrupti, earum optio voluptate.</p>
+
+
+
+        <!-- Partials -->
+        <!-- Partials -->
+        <!-- Partials -->
+        <!-- Partials -->
+
+        {% include 'partials/header.html' %}
+        {% include 'partials/nav.html' %}
+        {% include 'partials/article.html' %}
+        {% include 'partials/footer.html' %}
+
+
+        <!-- page2 extend part -->
+        <!-- page2 extend part -->
+        <!-- page2 extend part -->
+        <!-- page2 extend part -->
+
+        {% extends 'page1.html' %}
+
+{% block blockname %}
+<title>page2</title>
+{% endblock %}
+
+{% block header %}
+<h1>Page 2</h1>
+{% endblock %}
+
+
+
+    
+</body>
+</html>

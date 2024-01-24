@@ -52,11 +52,24 @@ class updatee(View):
                 form.save()
                 return HttpResponse("data stored in table")
 
+
+
 def delete(request, pk):
     movie.objects.filter(id=pk).delete()
     return HttpResponse("data deleted from table")
+
+class deletet(View):
+    def get(self,request,pk):
+        movie.objects.filter(id=pk).delete()
+        return HttpResponse("data deleted from table")
+
 
 def read(request):
     var = movie.objects.all()
     return render(request, "read.html", {'var':var})
 
+
+class rdrd(View):
+    def get(self,request,pk):
+        var = movie.objects.all()
+        return render(request, "read.html", {'var':var})

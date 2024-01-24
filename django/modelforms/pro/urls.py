@@ -27,6 +27,13 @@ urlpatterns = [
     path("update/<pk>", views.update),
     path("in/", v.insert),
     path("up/<pk>", v.update),
-    path("de/<pk>", v.delete)
+    path("de/<pk>", v.delete),
+    path("rd/", v.read),
+    path("inin/", v.insertt.as_view())
 
 ]
+
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

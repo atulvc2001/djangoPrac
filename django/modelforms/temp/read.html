@@ -7,10 +7,20 @@
 </head>
 <body>
     
+
+    
+    {% comment %}
     {% for i in var %}
         {{i.ename}}
         {{i.emob}}
         {{i.eadd}}
+    {% endfor %}
+    {% endcomment %}
+        
+    {% for i in var %}
+        {{i.mname}}
+        {{i.mdirector}}
+        <img src="{{i.mposter.url}}" alt="movie poster">
     {% endfor %}
         
 </body>

@@ -14,6 +14,20 @@ def insert(request):
             return HttpResponse("data stored in table")
     return render(request, "ins.html", {'var':var})
 
+#? CLASS BASED VIEW
+from django.views import View
+class insertt(View):
+    def get(self,request):
+        var=movieform()
+        return render(request,"ins.html",{"var":var})
+    def post(self,request):
+        if request.method=="POST" and request.FILES:
+                form=movieform(request.POST, request.FILES)
+                if form.is_valid():
+                    form.save()
+                    return HttpResponse("data stored in table")
+
+
 
 def update(request, pk):
     data=movie.objects.get(id=pk)
@@ -29,3 +43,8 @@ def update(request, pk):
 def delete(request, pk):
     movie.objects.filter(id=pk).delete()
     return HttpResponse("data deleted from table")
+
+def read(request):
+    var = movie.objects.all()
+    return render(request, "read.html", {'var':var})
+

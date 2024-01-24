@@ -29,7 +29,8 @@ urlpatterns = [
     path("up/<pk>", v.update),
     path("de/<pk>", v.delete),
     path("rd/", v.read),
-    path("inin/", v.insertt.as_view())
+    path("inin/", v.insertt.as_view()),
+    path("upup/<pk>",v.updatee.as_view())
 
 ]
 

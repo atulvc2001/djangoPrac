@@ -39,6 +39,18 @@ def update(request, pk):
             return HttpResponse("data stored in table")
     return render(request, "ins.html", {'var':var})
 
+class updatee(View):
+    def get(self,request,pk):
+        data=movie.objects.get(id=pk)
+        var = movieform(instance=data)
+        return render(request, "ins.html", {'var':var})
+    def post(self, request,pk):
+        data=movie.objects.get(id=pk)
+        if request.method=="POST" and request.FILES:
+            form=movieform(request.POST, request.FILES, instance=data)
+            if form.is_valid():
+                form.save()
+                return HttpResponse("data stored in table")
 
 def delete(request, pk):
     movie.objects.filter(id=pk).delete()

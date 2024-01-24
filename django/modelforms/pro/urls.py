@@ -26,5 +26,7 @@ urlpatterns = [
     path("delete/<pk>", views.delete),
     path("update/<pk>", views.update),
     path("in/", v.insert),
+    path("up/<pk>", v.update),
+    path("de/<pk>", v.delete)
 
 ]

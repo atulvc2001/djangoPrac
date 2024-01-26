@@ -17,3 +17,10 @@ def registration(request):
             return HttpResponse("Registration completed")
 
     return render(request, "sam.html",{"var":var})
+
+
+from django.contrib.auth.forms import AuthenticationForm
+
+def logn(request):
+    var=AuthenticationForm()
+    return render(request, "lgn.html",{"var":var})

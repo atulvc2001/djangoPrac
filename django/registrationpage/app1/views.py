@@ -20,7 +20,20 @@ def registration(request):
 
 
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate,login,logout
 
 def logn(request):
     var=AuthenticationForm()
+    if request.method == "POST":
+        username=request.POST['username']
+        password=request.POST['password']
+        var=authenticate(username=username,password=password)
+        if var is not None:
+            login(request, var)
+            return HttpResponse('login successfully')
+
     return render(request, "lgn.html",{"var":var})
+
+def logt(request):
+    logout(request)
+    return HttpResponse("Logged out")

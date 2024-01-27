@@ -36,4 +36,4 @@ def logn(request):
 
 def logt(request):
     logout(request)
-    return HttpResponse("Logged out")
+    return HttpResponse("Successfully Logged out")

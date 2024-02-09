@@ -13,7 +13,7 @@ def insert(request):
                         mob = form.cleaned_data['mob']
                         addr = form.cleaned_data['addrs']
                         customer.objects.create(cname=name,mob=mob,addrs=addr)
-                        return HttpResponse('data stored in the table')
+                        return HttpResponse('data IS stored in the table')
         return render(request, "sam.html", {'form':form})
     
 def read(request):
